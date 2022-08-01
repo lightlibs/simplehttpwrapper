@@ -1,3 +1,20 @@
 package com.github.lightlibs.simplehttpwrapper;
 
-public record SimpleHttpResponse(int statusCode, String data) {}
+public class SimpleHttpResponse {
+
+    private final int statusCode;
+    private final String data;
+
+    public SimpleHttpResponse (int statusCode, String data) {
+        this.statusCode = statusCode;
+        this.data = data;
+    }
+
+    public int getStatusCode() {
+        return statusCode;
+    }
+
+    public String getData() {
+        return data;
+    }
+}
