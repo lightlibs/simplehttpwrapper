@@ -35,6 +35,8 @@ public class SimpleHttpWrapper {
 
             if (headers != null) {
                 for (String headerEntry : headers) {
+                    if (headerEntry == null) continue;
+
                     String[] parts = headerEntry.split(":");
                     if (parts.length != 2) continue;
 
@@ -70,7 +72,5 @@ public class SimpleHttpWrapper {
 
             return new SimpleHttpResponse(responseCode, strb.toString());
         }
-
-        public record SimpleHttpResponse(int statusCode, String data) {}
 
 }
