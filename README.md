@@ -51,6 +51,38 @@ class Example {
 }
 ```
 
+## As a dependency
+### Gradle
+```groovy
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+```
+
+```groovy
+    dependencies {
+        implementation 'com.github.lightlibs:simplehttpwrapper:[VERSION-STRING]'
+    }
+```
+
+### Maven
+```xml
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+         </repository>
+    </repositories>
+```
+
+```xml
+    <dependency>
+        <groupId>com.github.lightlibs</groupId>
+        <artifactId>simplehttpwrapper</artifactId>
+        <version>[VERSION-STRING]</version>
+    </dependency>
+```
+
 Note: Make sure to handle `IOException` when making the requests.
 
 Feel free to customize the code or add additional functionality as needed. And make a PR ;)
