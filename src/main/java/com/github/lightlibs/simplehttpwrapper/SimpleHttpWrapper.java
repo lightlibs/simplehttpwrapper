@@ -48,6 +48,7 @@ public class SimpleHttpWrapper {
             }
 
             if (method.equals("POST") && postData != null) {
+                connection.setDoOutput(true);
                 try (OutputStream os = connection.getOutputStream()) {
                     byte[] postDataBytes = postData.getBytes(StandardCharsets.UTF_8);
                     os.write(postDataBytes, 0, postDataBytes.length);
