@@ -29,25 +29,26 @@ The `SupportedHttpMethod` enum defines the supported HTTP methods. It includes t
 To use the `SimpleHttpWrapper` class, import the `com.github.lightlibs.simplehttpwrapper` package and call the desired static methods. For example:
 
 ```java
+import com.github.lightlibs.simplehttpwrapper.HttpResponse;
+import com.github.lightlibs.simplehttpwrapper.HttpWrapper;
 import com.github.lightlibs.simplehttpwrapper.SimpleHttpWrapper;
-import com.github.lightlibs.simplehttpwrapper.SimpleHttpResponse;
 
 class Example {
-    
+
     public static void main(String[] args) {
         // Perform a GET request
-        SimpleHttpResponse response = SimpleHttpWrapper.get("https://example.com", null);
+        HttpResponse response = HttpWrapper.get("https://example.com", null);
         int statusCode = response.getStatusCode();
-        String data = response.getData();
+        String data = response.getBody();
 
         // Perform a POST request with headers and post data
         String[] headers = {"Content-Type: application/json"};
         String postData = "{ \"name\": \"John\", \"age\": 30 }";
-        SimpleHttpResponse response = SimpleHttpWrapper.post("https://example.com", headers, postData);
+        HttpResponse response = HttpWrapper.post("https://example.com", headers, postData);
         int statusCode = response.getStatusCode();
-        String data = response.getData();
+        String data = response.getBody();
     }
-    
+
 }
 ```
 
