@@ -1,4 +1,4 @@
-package com.github.lightlibs.simplehttpwrapper;
+package com.tcoded.lightlibs.simplehttpwrapper;
 
 public class ProgrammaticHttpMethod {
 

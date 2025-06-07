@@ -38,10 +38,9 @@ To use the `HttpWrapper` class, import the `com.github.lightlibs.simplehttpwrapp
 methods. For example:
 
 ```java
-import com.github.lightlibs.simplehttpwrapper.HttpHeader;
-import com.github.lightlibs.simplehttpwrapper.HttpResponse;
-import com.github.lightlibs.simplehttpwrapper.HttpWrapper;
-import com.github.lightlibs.simplehttpwrapper.SimpleHttpWrapper;
+import com.tcoded.lightlibs.simplehttpwrapper.HttpHeader;
+import com.tcoded.lightlibs.simplehttpwrapper.HttpResponse;
+import com.tcoded.lightlibs.simplehttpwrapper.HttpWrapper;
 
 class Example {
 

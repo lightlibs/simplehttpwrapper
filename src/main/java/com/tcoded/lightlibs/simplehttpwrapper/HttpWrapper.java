@@ -1,4 +1,4 @@
-package com.github.lightlibs.simplehttpwrapper;
+package com.tcoded.lightlibs.simplehttpwrapper;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
