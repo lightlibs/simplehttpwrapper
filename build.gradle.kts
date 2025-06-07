@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.tcoded.lightlibs"
-version = "0.0.5"
+version = "0.0.6"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
