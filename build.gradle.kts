@@ -26,7 +26,7 @@ if (enablePublishing) {
     publishing {
         publications {
             create<MavenPublication>("mavenJava") {
-                from(components["java"]) // Assumes this is a Java project
+                from(components["java"])
 
                 // Optional: add additional metadata
 //                pom {
@@ -43,10 +43,12 @@ if (enablePublishing) {
                 url = uri("https://repo.tcoded.com/releases") // or /snapshots if applicable
 
                 credentials {
-                    username = System.getenv("REPOSILITE_USER")
-                        ?: error("Environment variable REPOSILITE_USER is not set")
-                    password = System.getenv("REPOSILITE_PASS")
-                        ?: error("Environment variable REPOSILITE_PASS is not set")
+                    username = project.findProperty("REPOSILITE_USER")?.toString()
+                        ?: System.getenv("REPOSILITE_USER")
+                                ?: error("REPOSILITE_USER property or environment variable is not set")
+                    password = project.findProperty("REPOSILITE_PASS")?.toString()
+                        ?: System.getenv("REPOSILITE_PASS")
+                                ?: error("REPOSILITE_PASS property or environment variable is not set")
                 }
 
                 authentication {
