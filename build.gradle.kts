@@ -59,6 +59,6 @@ if (enablePublishing) {
     }
 
     tasks.assemble {
-        dependsOn(tasks.publishToMavenLocal)
+        dependsOn(tasks.publish)
     }
 }
